@@ -1,14 +1,11 @@
 {
   "name": "funnycord-discord-rpc",
   "displayName": "Funnycord - Discord RPC",
-  "description": "Show what you're coding on Discord, with your own custom language icons.",
-  "version": "0.1.2",
+  "description": "Show what you're coding on Discord",
+  "version": "0.1.3",
   "publisher": "abgesetzt",
   "license": "MIT",
   "homepage": "https://fc.abgesetzt.xyz",
-  "sponsor": {
-    "url": "https://ko-fi.com/abgesetzt"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/uwtryfyfu/funnycord"
