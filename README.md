@@ -7,7 +7,7 @@ Shows your file, your workspace, your git branch, your problem count, and
 a **language icon designed just for this extension** - because the
 built-in language icons are fine, but they're not *ours*.
 
-![Discord profile showing the presence in action](https://cdn.abgesetzt.xyz/assets/example.png)
+![Discord profile showing the presence in action](https://raw.githubusercontent.com/uwtryfyfu/funnycord/main/assets/example.png)
 
 ## Features
 
@@ -43,7 +43,7 @@ built-in language icons are fine, but they're not *ours*.
   Code windows and Extension Development Hosts running at once, so the
   timer doesn't reset every time you look at it funny.
 
-![Hidden files and folders staying out of your status](https://cdn.abgesetzt.xyz/assets/hidden.png)
+![Hidden files and folders staying out of your status](https://raw.githubusercontent.com/uwtryfyfu/funnycord/main/assets/hidden.png)
 
 ## Settings
 
