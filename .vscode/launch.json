@@ -1,0 +1,14 @@
+{
+  "version": "0.1.2",
+  "configurations": [
+    {
+      "name": "Run Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "outFiles": []
+    }
+  ]
+}

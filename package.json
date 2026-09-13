@@ -1,0 +1,171 @@
+{
+  "name": "funnycord-discord-rpc",
+  "displayName": "Funnycord - Discord RPC",
+  "description": "Show what you're coding on Discord, with your own custom language icons.",
+  "version": "0.1.2",
+  "publisher": "abgesetzt",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+  "main": "./src/extension.js",
+  "icon": "icons/extension-icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "discordRpc.manage",
+        "title": "Manage Discord RPC"
+      },
+      {
+        "command": "discordRpc.reconnect",
+        "title": "Reconnect",
+        "category": "Discord RPC"
+      },
+      {
+        "command": "discordRpc.disconnect",
+        "title": "Disconnect",
+        "category": "Discord RPC"
+      },
+      {
+        "command": "discordRpc.toggleConnection",
+        "title": "Toggle Connection",
+        "category": "Discord RPC"
+      },
+      {
+        "command": "discordRpc.openSettings",
+        "title": "Open Settings",
+        "category": "Discord RPC"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "discordRpc.manage"
+        },
+        {
+          "command": "discordRpc.openSettings"
+        },
+        {
+          "command": "discordRpc.toggleConnection"
+        },
+        {
+          "command": "discordRpc.reconnect"
+        },
+        {
+          "command": "discordRpc.disconnect"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Funnycord",
+      "properties": {
+        "discordRpc.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Discord Rich Presence."
+        },
+        "discordRpc.keepLastFileOnBlur": {
+          "type": "boolean",
+          "default": true,
+          "description": "Keep showing the last file you were editing when focus moves to the terminal, sidebar, or search, instead of briefly switching to 'Deciding what to open'. Does not affect idle detection - going idle always overrides this."
+        },
+        "discordRpc.showFileName": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the current file name in your Discord status."
+        },
+        "discordRpc.hiddenFilePatterns": {
+          "type": "array",
+          "default": [
+            ".env",
+            "*.env",
+            "*.key",
+            "*.pem",
+            "*secret*"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "description": "File names or workspace-relative paths that should not be shown in Discord status. Supports * wildcards."
+        },
+        "discordRpc.hiddenFolderPatterns": {
+          "type": "array",
+          "default": [
+            ".git",
+            "node_modules",
+            "dist",
+            "build",
+            "out"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "description": "Folder names or workspace-relative folder paths whose files should not be shown in Discord status. Supports * wildcards."
+        },
+        "discordRpc.showWorkspace": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the current workspace/folder name in your Discord status."
+        },
+        "discordRpc.showElapsedTime": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a running timer for the current VS Code session. The timer resets when VS Code restarts."
+        },
+        "discordRpc.idleCheckTimeout": {
+          "type": "number",
+          "default": 300,
+          "description": "Seconds of inactivity before switching to the 'Idle' presence."
+        },
+        "discordRpc.showGitBranch": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the current git branch name when in a repo."
+        },
+        "discordRpc.showProblems": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the current workspace Problems count in your Discord status."
+        },
+        "discordRpc.funnyMode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use playful status text (e.g. 'Wrestling with app.js') instead of plain 'Editing app.js'."
+        },
+        "discordRpc.showRepoButton": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add a 'View Repository' button to your presence, auto-detected from the git remote. For github.com remotes, the button only shows once the repo is confirmed public via the GitHub API - private repos never get a button. Other git hosts (GitLab, self-hosted, etc.) are unaffected. Note: buttons don't render on your own Discord client, only for people viewing your profile."
+        },
+        "discordRpc.secondButtonLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Optional label for a second custom button (e.g. 'My Portfolio'). Leave blank to omit."
+        },
+        "discordRpc.secondButtonUrl": {
+          "type": "string",
+          "default": "",
+          "description": "URL for the optional second button. Required if secondButtonLabel is set."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "echo \"(no linter configured)\""
+  },
+  "dependencies": {
+    "@xhayper/discord-rpc": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.24.0"
+  }
+}
