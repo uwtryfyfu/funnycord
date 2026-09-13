@@ -4,11 +4,24 @@
   "description": "Show what you're coding on Discord, with your own custom language icons.",
   "version": "0.1.2",
   "publisher": "abgesetzt",
+  "license": "MIT",
+  "homepage": "https://fc.abgesetzt.xyz",
+  "sponsor": {
+    "url": "https://ko-fi.com/abgesetzt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uwtryfyfu/funnycord"
+  },
+  "bugs": {
+    "url": "https://fc.abgesetzt.xyz/bug-report"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Visualization"
   ],
   "activationEvents": [
     "onStartupFinished"
