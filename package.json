@@ -29,7 +29,7 @@
   "extensionDependencies": [
     "vscode.git"
   ],
-  "main": "./src/extension.js",
+  "main": "./dist/extension.js",
   "icon": "icons/extension-icon.png",
   "contributes": {
     "commands": [
@@ -172,13 +172,16 @@
     }
   },
   "scripts": {
-    "lint": "echo \"(no linter configured)\""
+    "lint": "echo \"(no linter configured)\"",
+    "build": "esbuild ./src/extension.js --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --minify",
+    "vscode:prepublish": "npm run build"
   },
   "dependencies": {
     "@xhayper/discord-rpc": "^1.2.1"
   },
   "devDependencies": {
     "@types/vscode": "^1.85.0",
-    "@vscode/vsce": "^2.24.0"
+    "@vscode/vsce": "^2.24.0",
+    "esbuild": "^0.28.2"
   }
 }

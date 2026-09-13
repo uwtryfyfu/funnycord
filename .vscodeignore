@@ -1,4 +1,7 @@
 .vscode/**
-icons/README.md
-**/*.map
-.gitignore
+.git/**
+src/**
+node_modules/**
+*.map
+**/*.ts
+!dist/**
